@@ -1,0 +1,17 @@
+patterns:
+  - id: inj_ignore_previous
+    category: prompt_injection
+    pattern: "ignore\\s+(all\\s+)?(previous|prior)\\s+instructions"
+    severity: 85
+  - id: ext_system_prompt
+    category: extraction
+    pattern: "reveal\\s+(your\\s+)?system\\s+prompt"
+    severity: 90
+  - id: jail_admin
+    category: jailbreak
+    pattern: "act\\s+as\\s+(an?\\s+)?admin(istrator)?"
+    severity: 75
+  - id: tool_injection
+    category: tool_abuse
+    pattern: "<\\s*tool_call"
+    severity: 70
